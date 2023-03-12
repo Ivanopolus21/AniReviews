@@ -1,0 +1,185 @@
+/*----------------- ALL STUFF ------------------------------------------------------------------------------------------------------- */
+a:visited, a{
+    color: #1d439b;             /*колір лінків не змінюється*/
+}
+
+
+.validation.success input {
+    border-color: #09c372;
+}
+
+
+.validation.error input {
+    border-color: #ff3860;
+}
+
+
+.validation input:focus{
+    outline: 0;
+}
+
+.validation .error {
+    color: #ff3860;
+    font-size: 20px;
+    text-shadow: 0 0 0 black;
+    display:inline;
+    background-color:white;
+}
+
+
+@media print {
+    nav {
+        display:none;
+    }
+}
+
+/*----------------- MAIN STUFF ------------------------------------------------------------------------------------------------------- */
+body {
+    background-image: url('../images/stickers_normal_ok.png');
+    background-size:25%;
+    background-repeat:repeat;
+    background-position: 0 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    text-shadow: 4px 4px 8px black;
+    margin: 0;
+
+    /* background-size: 35%, 25%;
+    background-repeat: no-repeat, repeat;
+    background-position: 25% 5%, 100% 100%; */
+
+}
+
+
+form {
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+
+
+form h3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130%;
+}
+
+
+#login {
+    font-size: 25px;
+    margin-top: 5%;
+    /*background-color: #673a3a;*/
+    border-radius: 10px;
+    background-image: url('../images/AniReviews_Nao_Fixed.png');
+    background-size: cover;
+    background-position:20% 0;
+    background-repeat: no-repeat;
+    border:0;
+    width:22%;
+    max-height:100%;
+    max-width: 100%;
+}
+
+
+#login a {
+    text-decoration: none;
+    color:rgb(228, 228, 180);
+}
+
+
+#login input {
+    font-size: 20px;
+    display:block;
+    margin-top:2%;
+}
+
+
+#button {
+    font-size: 80%;
+}
+
+
+#link-to-return {
+    max-width:100%;
+    font-size: 90%;
+    margin-left:170px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+
+#passwordToggle{
+    display:block;
+    width:20px;
+    height:20px;
+    margin-left:5px;
+}
+
+
+.required{
+    color:red;
+    text-shadow: 1px 3px 0 black;
+}
+
+
+.show_pass{
+    font-size: 20px;
+    padding-top:5px;
+    text-shadow: 2px 1px 1px black;
+}
+
+
+.means_required{
+    font-size: 20px;
+    padding-top:5px;
+    color:red;
+    text-shadow: 2px 1px 1px black;
+}
+
+
+#low_things{
+    display:flex;
+    flex-direction: row;
+}
+/*----------------- NAV -------------------------------------------------------------------------------------------------------------- */
+nav{
+    position:fixed;
+    padding-top:22%;
+}
+
+
+nav a{
+    text-decoration:none;
+    max-width:100%;
+    display: block;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul li{
+    border:1px solid black;
+    background-color: #a3d6e5;
+    white-space: nowrap;
+    display: block;
+    text-shadow: 0 0 0 black;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+
+.nav_border_top{
+    border-radius: 0 20px 0 0;
+}
+
+
+.nav_border_bot{
+    border-radius: 0 0 20px 0;
+}

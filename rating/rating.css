@@ -1,0 +1,272 @@
+/*----------------- ALL STUFF -------------------------------------------------------------------------------------------------------- */
+:root{
+    --header-color: rgb(233, 191, 131);
+    --table-color: blanchedalmond;
+    --cells-color: azure;
+    --link-color: #1d439b;
+    --headings-color: black;
+    --text-color: black;
+    --footer-color: rgb(233, 191, 131);
+    --social-links-color: #1d439b;
+}
+
+
+.dark-theme {
+    --header-color : #542ea2;
+    --table-color: #7452b9;
+    --cells-color: #9a86c2;
+    --link-color: #310f77;
+    --headings-color: #d5c5f6;
+    --text-color:white;
+    --footer-color:#542ea2;
+    --social-links-color: #d5c5f6;
+}
+
+
+a:visited, a{
+    color: var(--link-color);             /*колір лінків не змінюється*/
+}
+
+
+::selection {
+    color: white;
+    background-color:cornflowerblue;
+}
+
+
+@media print {
+    nav, footer {
+        display:none;
+    }
+}
+
+
+/*@media (max-width: 1500px) {*/
+/*    nav {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+/*----------------- TABLE ------------------------------------------------------------------------------------------------------------ */
+#switchIcon {
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    margin-left: 25%;
+    display:inline-block;
+}
+
+
+h1{
+    display:inline;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    padding-left:22%;
+    color:var(--headings-color);
+}
+
+
+body{
+    margin: 0;
+    background-image: url('../images/stickers_normal_ok.png');
+    background-size: 25%;
+    background-repeat:repeat;
+    background-position: 0 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+img{
+    width: 100%;
+    display: table-cell;
+    cursor: pointer;                    /* розмір картинок тайтлів */
+}
+
+
+header{
+    position:absolute;
+    width: 100%;
+    left:0;
+    right: 0;
+
+}
+
+
+#top-items{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    background-color:var(--header-color);
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width:879px;
+}
+
+
+.centered-main-table{
+    display:flex;
+    justify-content: center;                                                          /*центрування всієї таблички*/
+    align-items: center;
+    table-layout: fixed;
+    padding-top: 100px;
+}
+
+
+.list-table{
+    background-color: var(--table-color);
+    width:auto;
+}
+
+
+.list-table-header{
+    font-size: 25px;
+    color:var(--headings-color)
+}
+
+
+.list-table-data{
+    font-size: 21px;
+    background-color:var(--cells-color);
+}
+
+
+.header-title.number{
+    width: 30px;                                                                        /*відступ невеликий між номером та картинкою*/
+}
+
+
+.header-title.name{
+    width: 350px;                                                                     /*стабільний розмір заголовку картинок*/
+}
+
+
+.header-title.image, .header-title.rate{
+    width: 100px;                                                                 /*стабільний розмір заголовку картинок*/
+}
+
+
+.header-title.genre{
+    width: 250px;                                                                     /*стабільний розмір заголовку картинок*/
+}
+
+
+.data{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;                                                            /*оформлення елементів таблички*/
+    word-wrap: break-word;
+}
+
+
+.data.image{
+    display:block;
+}
+
+
+.list-table .list-table-data .data.number, .data.name, .data.rate, .data.genre, .data.more{
+    padding:10px;
+    border: 1px solid;
+}
+
+
+/*#homebutton{*/
+/*    width:70px;*/
+/*    margin: 0 145.75%;*/
+/*}*/
+
+/*----------------- NAV -------------------------------------------------------------------------------------------------------------- */
+nav{
+    position:fixed;
+    padding-top:22%;
+    z-index:99;
+}
+
+
+nav a{
+    text-decoration:none;
+    max-width:100%;
+    display: block;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul li{
+    border:1px solid black;
+    padding-left: 10px;
+    background-color: #a3d6e5;
+    padding-right: 10px;
+    white-space: nowrap;
+    display: block;
+}
+
+
+.nav_border_top{
+    border-radius: 0 20px 0 0;
+}
+
+
+.nav_border_bot{
+    border-radius: 0 0 20px 0;
+}
+
+/*----------------- FOOTER ----------------------------------------------------------------------------------------------------------- */
+footer{
+    background-color:var(--footer-color);
+    color:rgb(250, 250, 250);
+    font-size: large;
+    padding-top:20px;
+    /* background-color: rgb(181, 175, 92); */
+}
+
+
+footer a{
+    font-size: 25px;
+}
+
+
+.footer_container{
+    display:flex;
+    justify-content: center;                                                          /*центрування всієї таблички*/
+    align-items: center;
+    gap:30px;
+}
+
+
+#contact{
+    margin: 0 20px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    text-shadow: 0 2px 2px black;
+}
+
+
+#sources a{
+    color:var(--social-links-color);
+}
+
+
+.socialIcon{
+    height: 30px;
+    width: 30px;
+    float:left;  
+}
+
+
+.socialMedia{
+    margin-bottom:10px;
+}
+
+
+.medialink{
+    margin: 0 10px;
+}

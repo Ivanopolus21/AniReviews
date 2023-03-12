@@ -1,0 +1,620 @@
+/*----------------- ALL STUFF ---------------------------------------------------------------------------------------------------------- */
+:root{
+    --header-color:white;
+    --nav-color:#a3d6e5;
+    --main-color:rgb(233, 191, 131);
+    --main-content-color: rgb(246, 222, 187);
+    --hr-color: #d0753b;
+    --content-header-color:#422805;
+    --content-text-color:#9f4913;
+    --same-titles-color: #5b2c0c;
+    --reccomended-titles-and-cite-color: rgba(134, 58, 25, 0.76);
+    /*--afterwords-color: rgba(162, 49, 15, 0.59);*/
+    --afterwords-color: rgb(87, 54, 4);
+    --comments-form-color: #bd8059;
+    --comments-form-and-all-comments-form-headers-color: #422805;
+    --unlogged-message-color:rgb(246, 222, 187);
+    --comment-and-button-background-color: #fcd7af;
+    --comment-text-color: #3d2403;
+    --comment-box-shadow-color: rgba(218, 154, 115, 0.64);
+    --button-text-color: rgba(75, 21, 4, 0.94);
+    --textarea-placeholder-and-comment-text-color: #260401;
+    --all-comments-form-and-footer-background-color: #bd8059;
+    --comment-background-color: #ffd7b5;
+    --footer-text-color: rgba(51, 17, 16, 0.87);
+    --text-shadow:1px 0px 0px #e0e0e0;
+    --error-comment-text-color: black;
+    --error-comment-background-color:white;
+}
+
+
+.dark-theme{
+    --header-color:white;
+    --nav-color:#a3d6e5;
+    --main-color:#4c3d83;
+    --main-content-color:#8775c9;
+    --hr-color:#6b5d8d;
+    --content-header-color:#441a65;
+    --content-text-color:#e7e3e3;
+    --same-titles-color:#ea9e86;
+    --reccomended-titles-and-cite-color:blanchedalmond;
+    --afterwords-color:#e6d3fd;
+    --comments-form-color:#361972;
+    --comments-form-and-all-comments-form-headers-color:#efedf3;
+    --unlogged-message-color:#efedf3;
+    --comment-and-button-background-color:rgb(137, 112, 187);
+    --comment-text-color:#dcd3ef;
+    --comment-box-shadow-color:rgba(87, 53, 157, 0.79);
+    --button-text-color:#4b1aa2;
+    --textarea-placeholder-and-comment-text-color:#310f77;
+    --all-comments-form-and-footer-background-color:#361972;
+    --comment-background-color:rgb(154, 134, 194);
+    --footer-text-color:rgb(250, 250, 250);
+    --text-shadow:0px 3px 3px black;
+    --error-comment-text-color: white;
+    --error-comment-background-color:black;
+}
+
+
+a:visited, a{
+    color: #1d439b;             /*колір лінків не змінюється*/
+}
+
+
+body {
+    margin: 0;
+    background-image: url('../images/stickers_normal_ok.png');
+    background-size: 25%;
+    background-repeat:repeat;
+    background-position: 0 0;
+}
+
+
+@media print {
+    nav, footer {
+        display:none;
+    }
+}
+
+
+/*@media (max-width: 1500px) {*/
+/*    nav {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+/*----------------- TOP STUFF ---------------------------------------------------------------------------------------------------------- */
+#switchIcon {
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:var(--header-color);
+    text-shadow: 2px 2px 3px black;
+    font-size: 300%;
+    margin-left:50px;
+}
+
+
+header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*----------------- NAV ---------------------------------------------------------------------------------------------------------------- */
+nav{
+    position:fixed;
+    margin-top: 22%;
+    z-index:99;
+}
+
+
+nav a{
+    text-decoration:none;
+    max-width:100%;
+    display: block;
+}
+
+
+nav ul {
+    padding:0;
+    margin:0;
+
+}
+
+
+nav ul li{
+    border: 1px solid black;
+    padding-left: 10px;
+    background-color: #a3d6e5;
+    padding-right: 10px;
+    white-space: nowrap;
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+.nav_border_top{
+    border-radius: 0 20px 0 0;
+}
+
+
+.nav_border_bot{
+    border-radius: 0 0 20px 0;
+}
+
+/*----------------- FUNDAMENTAL STUFF -------------------------------------------------------------------------------------------------- */
+main{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+#main-things {
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding-bottom: 120px;
+    background-color: var(--main-color);
+
+}
+
+
+main ul {
+    padding-inline-start: 0;
+
+}
+
+
+main ul li {
+    border:1px solid black;
+    /*background-color:aliceblue;*/
+    background-color: var(--main-content-color);
+
+}
+
+
+main ul li h2{
+    list-style-type:none;
+    font-size:30px;
+    padding-left:2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.horizontal_line {
+    border-top: 1px dashed var(--hr-color);
+    border-bottom: 1px dashed var(--hr-color);
+}
+
+main ul li p:first-letter{
+    padding-left: 20px;
+}
+
+
+main ul li:first-child{
+    border-radius:20px 20px 0 0;
+}
+
+
+main ul li:last-child{
+    border-radius:0 0 20px 20px;
+    min-width:20%;
+}
+
+
+main ul li:last-child h2{
+    text-align: center;
+    padding:0;
+}
+
+
+.content{
+    display:inline-block;
+    min-width:100%;
+}
+
+
+.content h2 {
+    color: var(--content-header-color);
+}
+
+
+.content p{
+    font-size:23px;
+    width: 100%;
+    padding-left:2%;
+    padding-right:1%;
+    box-sizing: border-box;
+    list-style-type:none;
+    font-family: "Calibri Light", cursive;
+    font-weight: 1000;
+    color: var(--content-text-color);
+}
+
+
+.content #characters_poster{
+    width:400px;
+    height:250px;
+    border-radius:10px;
+
+}
+
+
+.content #animation_gif{
+    width:350px;
+    height:200px;
+    border-radius:10px;
+}
+
+
+.media_div{
+    cursor:pointer;
+}
+
+
+.media_div img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+
+.media_div img:hover{
+    transform:scale(1.05);
+}
+
+
+.pop-up-image{
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.9);
+    height:100%;
+    width:100%;
+    z-index:100;
+    display:none;
+}
+
+
+.pop-up-image span{
+    position:absolute;
+    top:0;
+    right:10px;
+    font-size:60px;
+    font-weight:bolder;
+    color:#ffff;
+    cursor:pointer;
+    z-index: 100;
+}
+
+
+.pop-up-image img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px){
+    .pop-up-image img{
+        width:95%;
+    }
+}
+
+.media_div {
+    text-align: center;
+    padding-bottom:10px;
+}
+
+
+#ending {
+    border-radius:0 0 20px 0;
+}
+
+/*----------------- ADDITIONAL STUFF --------------------------------------------------------------------------------------------------- */
+.additional-things{
+    padding-bottom: 2%;
+}
+
+
+.additional-things p, .additional-things cite{
+    font-size:22px;
+    padding-left:2%;
+}
+
+
+.additional-things p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: var(--text-shadow);
+    /*color: floralwhite;*/
+}
+
+
+.same_titles{
+    color: var(--same-titles-color);
+    /*text-shadow: 0px 1px 1px #6e3c21;*/
+}
+
+
+.recommended{
+    color: var(--reccomended-titles-and-cite-color);
+    /*text-shadow: 0 1px 1px #852e3c;*/
+}
+
+
+.afterwords{
+    color: var(--afterwords-color);
+    /*text-shadow: 0 0px 0px ;*/
+    font-weight: 100;
+}
+
+
+cite {
+    font-weight: bold;
+    color: var(--reccomended-titles-and-cite-color);
+    text-shadow: 0 1px 1px #852e3c;
+    display:block;
+}
+
+/*----------------- COMMENTS ----------------------------------------------------------------------------------------------------------- */
+.comments_form{
+    margin-left: 50px;
+    width: 1200px;
+    min-height: 100%;
+    background: var(--comments-form-color);
+    border-radius: 40px;
+
+}
+
+
+.comments_form h2{
+    padding-top:10px;
+    margin-left: 50px;
+    font-size:35px;
+    font-style: normal;
+    line-height: 27px;
+    text-align:left;
+    color: var(--comments-form-and-all-comments-form-headers-color);
+
+}
+
+
+textarea{
+    width:92.5%;
+    max-width: 87%;
+    min-width: 87%;
+    height:220px;
+    min-height: 220px;
+    max-height: 500px;
+}
+
+
+#php_comment_error{
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    padding:10px;
+    font-size:25px;
+    font-style: normal;
+    line-height: 27px;
+    text-align:left;
+    background-color: var(--error-comment-background-color);
+    color: var(--error-comment-text-color);
+    display:inline-block;
+}
+
+
+.unlogged_message{
+    margin-left: 50px;
+    font-size:28px;
+    font-style: normal;
+    line-height: 29px;
+    color: var(--unlogged-message-color);
+    font-weight: bold;
+}
+
+
+.opinion {
+    gap:10px;
+    float: right;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    margin-top:-55px;
+}
+
+
+.opinion img{
+    margin-left: -10px;
+    width: 20px;
+}
+
+
+label{
+    margin-left: 35px;
+}
+
+
+.comments_text{
+    width: 1050px;
+    height:200px;
+    min-height: 100%;
+    background: var(--comment-and-button-background-color);
+    border-radius: 35px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    color: var(--comment-text-color);
+    font-size:25px;
+    font-weight: 600;
+}
+
+
+.button{
+    align-items: center;
+    justify-content:center;
+    background-color: var(--comment-and-button-background-color);
+    border: 1px none;
+    border-radius: 40px;
+    box-shadow: 2px 3px 6px 3px var(--comment-box-shadow-color);
+    display: flex;
+    padding: 0 30px;
+    margin-right: 55px;
+    min-width: 70px;
+    min-height: 40px;
+    top: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration-line: none;
+    color: var(--button-text-color);
+
+}
+
+
+textarea{
+    padding: 20px 30px;
+
+}
+
+
+::placeholder {
+    color: var(--textarea-placeholder-and-comment-text-color);
+    opacity: 0.7;
+    font-size: 24px;
+}
+
+/* ------------------------all comments------------------------*/
+.all_comments{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 1200px;
+    height: 100%;
+    background: var(--all-comments-form-and-footer-background-color);
+    border-radius: 40px;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+}
+
+.all_comment_header{
+    color: var(--comments-form-and-all-comments-form-headers-color);
+    /*margin-right:120px;*/
+    font-weight: 700;
+    font-size:35px;
+}
+
+
+.delete{
+    width:26px;
+    height:29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 950px;
+    margin-bottom: -20px;
+    margin-top: -30px;
+    font-size: 13px;
+}
+
+
+.comment {
+    width: 1050px;
+    height: 100%;
+    background: var(--comment-background-color);
+    border-radius: 30px;
+    color: var(--textarea-placeholder-and-comment-text-color);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+
+.comment:first-child{
+    margin-top:25px;
+}
+
+
+.username{
+    margin: 20px 20px 20px 30px;
+}
+
+
+.opinion_comment{
+    margin: 20px 20px 20px 30px;
+}
+
+/*----------------- FOOTER ------------------------------------------------------------------------------------------------------------- */
+footer{
+    background-color: var(--all-comments-form-and-footer-background-color);
+    /*background-color:rgb(233, 191, 131);*/
+    color:var(--footer-text-color);
+    font-size: large;
+    padding-top:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width:100%;
+    max-height:100%;
+
+    /* background-color: rgb(181, 175, 92); */
+}
+
+
+footer a{
+    font-size: 25px;
+}
+
+
+.footer_container{
+    display:flex;
+    justify-content: center;                                                          /*центрування всієї таблички*/
+    align-items: center;
+    gap:30px;
+}
+
+
+#sources a{
+    color:var(--social-links-color);
+}
+
+
+#contact{
+    margin: 0 20px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    text-shadow: 0 0 0 black;
+}
+
+
+.socialIcon{
+    height: 30px;
+    width: 30px;
+    float:left;
+}
+
+
+.socialMedia{
+    margin-bottom:10px;
+}
+
+
+.medialink{
+    margin: 0 10px;
+}
